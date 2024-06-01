@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:#ffffff;
+}
+
+.main.container {
+  background-color: #3179ba;
+  padding: 0;
+}
+
+.column__card-bg {
+  background-color: #f1f2f4;
+}
+
+.column__card-top input {
+  color: #2c3a58;
+  font-weight: 700;
+}
+
+.column__card-top i {
+  color: #2c3a58;
+  font-weight: 700;
+}
+
+.column__task {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.modal, .form-label, .column__task p, h5 {
+  color: #000000;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
