@@ -1,18 +1,19 @@
 <template>
-  <div class="main container vh-100 position-relative overflow-hidden">
-    <Navbar/>
-    <Sidebar/>
-    <BoardList/>
-    <Column v-bind:columns="columns"/>
+  <div>
+    <div class="main container vh-100 position-relative overflow-hidden">
+      <Navbar/>
+      <Sidebar/>
+      <BoardList/>
+      <Column v-bind:columns="columns"/>
+    </div>
+
+    <ModalCreateColumn
+      v-for="column in columns"
+      @create="createColumn"
+      v-bind:column="column"
+    />
+    <ModalCreateTask v-bind:columns="columns"/>
   </div>
-
-  <ModalCreateColumn
-    v-for="column in columns"
-    @create="createColumn"
-    v-bind:column="column"
-  />
-  <ModalCreateTask v-bind:columns="columns"/>
-
 </template>
 <script>
 import Sidebar from '@/components/Sidebar.vue';

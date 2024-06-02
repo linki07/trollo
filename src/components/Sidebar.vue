@@ -1,9 +1,11 @@
 <template>
+  <div>
     <div class="sidebar position-absolute vh-100 border-end close" @click="sidebarToggle">
       <div class="sidebar__button cursor-pointer position-absolute p-1 d-flex align-items-center justify-content-center" >
         <i class="bi bi-chevron-right "></i>
       </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
