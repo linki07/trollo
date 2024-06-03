@@ -12,23 +12,23 @@
               >
               <i class="bi bi-three-dots"></i>
             </div>
-
-              <draggable
-                v-model="column.tasks"
-                item-key="index"
-                class="column__tasks d-flex flex-column mb-3"
-              >
-                <template #item="{element:task}">
-                  <Task
-                    @create="createTask"
-                    v-bind:typeTask="task.typeTask"
-                    v-bind:taskDescription="task.taskDescription"
-                    v-bind:id="task.id"
-                    @update:typeTask="updateTypeTask(index, task.id, $event)"
-                    @update:taskDescription="updateTaskDescription(index, task.id, $event)"
-                  />
-                </template>
-              </draggable>
+            <draggable
+              v-model="column.tasks"
+              item-key="index"
+              class="column__tasks d-flex flex-column mb-3"
+              group="tasks"
+            >
+              <template #item="{element:task}">
+                <Task
+                  @create="createTask"
+                  v-bind:typeTask="task.typeTask"
+                  v-bind:taskDescription="task.taskDescription"
+                  v-bind:id="task.id"
+                  @update:typeTask="updateTypeTask(index, task.id, $event)"
+                  @update:taskDescription="updateTaskDescription(index, task.id, $event)"
+                />
+              </template>
+            </draggable>
 
             <div class="column__card-top-bottom text-primary">
               <button class="border-0 me-2 text-primary"
@@ -40,7 +40,6 @@
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -62,7 +61,6 @@ export default {
   },
   data() {
     return {
-      drag: true,
       column: [
         {
           id: Date.now(),

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="main container vh-100 position-relative overflow-hidden">
+    <div class="main container vh-100 position-relative overflow-auto">
       <Navbar/>
       <Sidebar/>
       <BoardList/>

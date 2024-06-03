@@ -59,7 +59,6 @@ export default {
   },
   methods: {
     createTask(index) {
-      //console.log('this.columns',this.columns)
       this.task.id = Date.now();
       this.$emit('create', this.task, index, this.task.id)
       this.columns[index].tasks.push(this.task);

@@ -47,7 +47,7 @@ export default {
     },
     saveEdit() {
       this.isEditing = false;
-      this.$emit('update:typeTask', this.editedTypeTask);
+      this.$emit('update:typeTask', this.editedTypeTask, this.editedTaskDescription);
       this.$emit('update:taskDescription', this.editedTaskDescription);
     },
   },

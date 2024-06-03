@@ -50,12 +50,16 @@ export default {
   },
   methods: {
     createColumn() {
-      this.column.id = Date.now();
-      this.column.tasks = []
-      this.$emit('create', this.column)
-      this.column = {
-        titleColumn: '',
-        tasks: [],
+      if (this.column.titleColumn.length > 0) {
+        this.column.id = Date.now();
+        this.column.tasks = []
+        this.$emit('create', this.column)
+        this.column = {
+          titleColumn: '',
+          tasks: [],
+        }
+      } else {
+        alert('set Title Column')
       }
     },
   }
